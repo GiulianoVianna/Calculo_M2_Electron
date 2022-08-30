@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <title>*** Calculo - Valor em M2 ***</title>
+
+</head>
+
+<style>
+
+  #altura {
+    border-style: solid;
+    width: 20%;
+    background-color: rgb(251, 252, 249);
+    border-color: darkcyan;
+
+  }
+
+  #largura {
+    border-style: solid;
+    width: 20%;
+    background-color: rgb(251, 252, 249);
+    border-color: darkcyan;
+
+  }
+
+  #valor {
+    border-style: solid;
+    width: 20%;
+    background-color: rgb(251, 252, 249);
+    border-color: darkcyan;
+  }
+
+  #resultado {
+    border-style: solid;
+    width: 20%;
+    background-color: rgb(251, 252, 249);
+    border-color: darkcyan;
+    background-color: darkcyan;
+    color: white;
+  }
+
+  label {
+
+    display: inline-block;
+    width: 90px;
+    margin: 0 75px;
+    color: darkcyan;
+  }
+
+  button {
+
+    display: inline-block;
+    width: 170px;
+    margin: 17px 17px;
+
+  }
+
+  legend {
+
+    color: darkcyan;
+    margin: 16.5px 15px;
+    background-color: chartreuse;
+    width: 390px;
+    text-align: center;
+
+  }
+
+  #desenvolvido {
+    background-color: chartreuse;
+    margin: 0 15px;
+    width: 390px;
+    text-align: center;
+  }
+
+  .alinhamento {
+    text-align: center;
+  }
+</style>
+
+<body>
+
+  <legend>*** Cálculo - Valor em M2 ***</legend>
+  <p>
+    <label>Altura:</label>
+    <input id="altura" type="text" class="alinhamento"> cm </br>
+  <p>
+    <label>Largura: </label>
+    <input id="largura" type="text" class="alinhamento"> cm </br>
+  <p>
+    <label>Valor M2: </label>
+    <input id="valor" type="text" class="alinhamento"> </br>
+  <p>
+    <label>Total: </label>
+    <input id="resultado" type="text" class="alinhamento"> </br>
+  <p>
+    <button type="button" id="calcular" class="btn btn-outline-success" onclick="calculo()">Calcular</button>
+
+    <button type="button" id="limpar" class="btn btn-outline-danger" onclick="limpar()">Limpar</button>
+  
+  <p>
+  <p>
+  <p id="desenvolvido">Desenvolvido por Giuliano Vianna.</p>
+
+
+  <script>
+    function calculo() {
+      var num1 = document.getElementById("altura").value / 100;
+      var num2 = document.getElementById("largura").value / 100;
+      var valor = document.getElementById("valor").value;
+      var soma = parseInt(num1) + parseInt(num2);
+      document.getElementById("resultado").value = ((parseFloat(num1) * parseFloat(num2)) * parseFloat(valor)).toFixed(2);
+
+    }
+
+    function limpar() {
+      document.getElementById("altura").value = "";
+      document.getElementById("largura").value = "";
+      document.getElementById("valor").value = "";
+      document.getElementById("resultado").value = "";
+
+    }
+
+  </script   
+
+</body>
+
+</html>
